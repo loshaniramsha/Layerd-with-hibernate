@@ -12,12 +12,12 @@ public class StudentBOimpl implements StudentBO {
 
     @Override
     public boolean saveStudnt(StudentDto dto) throws Exception {
-        return studentDAO.save(new Student(dto.getId(),dto.getName(),dto.getAddress()));
+        return studentDAO.save(new Student(dto.getId(), dto.getName(), dto.getAddress()));
     }
 
     @Override
     public boolean updateStudnt(StudentDto dto) throws Exception {
-        return studentDAO.update(new Student(dto.getId(),dto.getName(),dto.getAddress()));
+        return studentDAO.update(new Student(dto.getId(), dto.getName(), dto.getAddress()));
     }
 
     @Override
