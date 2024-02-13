@@ -28,8 +28,8 @@ public class StudentDAOimpl implements StudentDAO {
         Session session= FactoryConfiguration.getInstance().getSession();
         Transaction transaction= session.beginTransaction();
 
-       Student student=new Student();
-        session.delete(student);
+        session.remove(session.get(Student.class,id));
+
         transaction.commit();
         session.close();
         return true;

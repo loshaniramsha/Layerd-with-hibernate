@@ -12,7 +12,6 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration(){
         Configuration configuration=new Configuration().configure().addAnnotatedClass(Student.class);
-               // .addAnnotatedClass(Laptop.class);
         sessionFactory= configuration.buildSessionFactory();
 
     }
